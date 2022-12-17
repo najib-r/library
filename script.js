@@ -11,10 +11,15 @@ Book.prototype.showInfo = function() {
     return (this.title + " by " + this.author + ", " + this.pages + " pages, " + this.read)
 }
 
-function addBookToLibrary(title, author, pages, read) {
-    const book = new Book(title, author, pages, read)
+function addBookToLibrary(book) {
     myLibrary.push(book)
 } 
 
-addBookToLibrary("The Hobbit", "Author", "356", "yes")
-console.log(myLibrary[0].showInfo)
+const book1 = new Book("The Hobbit", "Author", "356", "yes")
+addBookToLibrary(book1)
+
+const book2 = new Book("Hunger Games", "Author 2", "297", "no")
+addBookToLibrary(book2)
+
+console.log(book1.showInfo())
+console.log(book2.showInfo())
