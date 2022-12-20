@@ -21,5 +21,14 @@ addBookToLibrary(book1)
 const book2 = new Book("Hunger Games", "Author 2", "297", "no")
 addBookToLibrary(book2)
 
-console.log(book1.showInfo())
-console.log(book2.showInfo())
+const book3 = new Book("Hunger Games II", "Author 2", "332", "no")
+addBookToLibrary(book3)
+
+const main = document.querySelector('.main')
+
+for (let i = 0; i < myLibrary.length; i++) {
+    var newElement = document.createElement('div');
+    newElement.className = "card"
+    newElement.innerHTML = myLibrary[i].showInfo()
+    main.appendChild(newElement)
+}
