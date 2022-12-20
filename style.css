@@ -9,6 +9,11 @@ header {
     background-color: beige;
     grid-column-start: 1;
     grid-column-end: 4;
+    padding: 0.3rem;
+}
+
+button {
+    float: right;
 }
 
 .main {
@@ -16,6 +21,7 @@ header {
     grid-column-end: 4;
     display: flex;
     gap: 2rem;
+    padding: 1rem;
 }
 
 .card {
@@ -25,4 +31,5 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.3rem;
 }
