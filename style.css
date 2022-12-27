@@ -33,3 +33,7 @@ button {
     align-items: center;
     padding: 0.3rem;
 }
+
+#popup {
+    display: none;
+}

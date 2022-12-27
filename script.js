@@ -15,6 +15,13 @@ function addBookToLibrary(book) {
     myLibrary.push(book)
 } 
 
+const popupForm = document.getElementById('popup')
+const newBookBtn = document.getElementById('newBtn')
+const cancelBtn = document.getElementById('cancelBtn')
+
+newBookBtn.addEventListener('click', () => popupForm.style.display = 'block')
+cancelBtn.addEventListener('click', () => popupForm.style.display = 'none')
+
 const book1 = new Book("The Hobbit", "Author", "356", "yes")
 addBookToLibrary(book1)
 
