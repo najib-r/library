@@ -15,12 +15,12 @@ function addBookToLibrary(book) {
     myLibrary.push(book)
 } 
 
-const popupForm = document.getElementById('popup')
+const modal = document.getElementById('myModal')
 const newBookBtn = document.getElementById('newBtn')
 const cancelBtn = document.getElementById('cancelBtn')
 
-newBookBtn.addEventListener('click', () => popupForm.style.display = 'block')
-cancelBtn.addEventListener('click', () => popupForm.style.display = 'none')
+newBookBtn.addEventListener('click', () => modal.style.display = 'block')
+cancelBtn.addEventListener('click', () => modal.style.display = 'none')
 
 const book1 = new Book("The Hobbit", "Author", "356", "yes")
 addBookToLibrary(book1)
