@@ -33,11 +33,17 @@ function validateForm() {
     const title = document.getElementById('b-title')
     const author = document.getElementById('b-author')
     const pages = document.getElementById('b-pages')
-    const read = document.getElementById('b-read')
+    let read = document.getElementById('b-read')
 
     // Validate all inputs...
 
-    const book = new Book(title.value, author.value, pages.value, read.value)
+    if (read.checked) {
+        read = "yes"    
+    } 
+    else {
+        read = "no"
+    }
+    const book = new Book(title.value, author.value, pages.value, read)
     addBookToLibrary(book)
     showBooks()
 }
