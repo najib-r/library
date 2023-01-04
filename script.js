@@ -1,70 +1,70 @@
 let myLibrary = [];
 
 function Book(title, author, pages, read) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
 }
 
 Book.prototype.showInfo = function() {
-    return (this.title + " by " + this.author + ", " + this.pages + " pages, " + this.read)
+    return (this.title + " by " + this.author + ", " + this.pages + " pages, " + this.read);
 }
 
 function addBookToLibrary(book) {
-    myLibrary.push(book)
+    myLibrary.push(book);
 } 
 
-const modal = document.getElementById('myModal')
-const newBookBtn = document.getElementById('newBtn')
-const cancelBtn = document.getElementById('cancelBtn')
-const submitBtn = document.getElementById('submitBtn')
+const modal = document.getElementById('myModal');
+const newBookBtn = document.getElementById('newBtn');
+const cancelBtn = document.getElementById('cancelBtn');
+const submitBtn = document.getElementById('submitBtn');
 
-newBookBtn.addEventListener('click', () => modal.style.display = 'block')
-cancelBtn.addEventListener('click', () => modal.style.display = 'none')
+newBookBtn.addEventListener('click', () => modal.style.display = 'block');
+cancelBtn.addEventListener('click', () => modal.style.display = 'none');
 
 
 submitBtn.addEventListener('click', function validateForm(event) {
 
-    event.preventDefault()
-    const title = document.getElementById('b-title')
-    const author = document.getElementById('b-author')
-    const pages = document.getElementById('b-pages')
-    let read = document.getElementById('b-read')
-    const inputs = document.querySelectorAll("input")
+    event.preventDefault();
+    const title = document.getElementById('b-title');
+    const author = document.getElementById('b-author');
+    const pages = document.getElementById('b-pages');
+    let read = document.getElementById('b-read');
+    const inputs = document.querySelectorAll("input");
 
      // Validate all inputs...
 
     if (read.checked) {
-        read = "yes"    
+        read = "yes";
     } 
     else {
-        read = "no"
+        read = "no";
     }
-    const book = new Book(title.value, author.value, pages.value, read)
-    addBookToLibrary(book)
-    showBooks()
-    modal.style.display = 'none'
+    const book = new Book(title.value, author.value, pages.value, read);
+    addBookToLibrary(book);
+    showBooks();
+    modal.style.display = 'none';
 
     // clear inputs
     inputs.forEach(input => {
-        input.value = ''
+        input.value = '';
     });
 });
 
 
-const book1 = new Book("The Hobbit", "Author", "356", "yes")
-addBookToLibrary(book1)
+const book1 = new Book("The Hobbit", "Author", "356", "yes");
+addBookToLibrary(book1);
 
-const book2 = new Book("Hunger Games", "Author 2", "297", "no")
-addBookToLibrary(book2)
+const book2 = new Book("Hunger Games", "Author 2", "297", "no");
+addBookToLibrary(book2);
 
-const book3 = new Book("Hunger Games II", "Author 2", "332", "no")
-addBookToLibrary(book3)
+const book3 = new Book("Hunger Games II", "Author 2", "332", "no");
+addBookToLibrary(book3);
 
 
 function showBooks() {
-    const main = document.querySelector('.main')
+    const main = document.querySelector('.main');
     // clear main
     main.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
@@ -75,4 +75,4 @@ function showBooks() {
     }
 }
 
-showBooks()
+showBooks();
