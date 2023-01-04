@@ -23,19 +23,17 @@ const submitBtn = document.getElementById('submitBtn')
 newBookBtn.addEventListener('click', () => modal.style.display = 'block')
 cancelBtn.addEventListener('click', () => modal.style.display = 'none')
 
-submitBtn.addEventListener('click', function(event) {
+
+submitBtn.addEventListener('click', function validateForm(event) {
+
     event.preventDefault()
-});
-
-submitBtn.addEventListener('click', validateForm)
-
-function validateForm() {
     const title = document.getElementById('b-title')
     const author = document.getElementById('b-author')
     const pages = document.getElementById('b-pages')
     let read = document.getElementById('b-read')
+    const inputs = document.querySelectorAll("input")
 
-    // Validate all inputs...
+     // Validate all inputs...
 
     if (read.checked) {
         read = "yes"    
@@ -46,7 +44,14 @@ function validateForm() {
     const book = new Book(title.value, author.value, pages.value, read)
     addBookToLibrary(book)
     showBooks()
-}
+    modal.style.display = 'none'
+
+    // clear inputs
+    inputs.forEach(input => {
+        input.value = ''
+    });
+});
+
 
 const book1 = new Book("The Hobbit", "Author", "356", "yes")
 addBookToLibrary(book1)
