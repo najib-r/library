@@ -70,7 +70,17 @@ function showBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
         var newElement = document.createElement('div');
         newElement.className = "card";
+        newElement.dataset.index = i;
         newElement.innerHTML = myLibrary[i].showInfo();
+        const button = document.createElement('button');
+        button.className = "removeBtn";
+        button.dataset.index = i;
+        button.textContent = "Remove Book";
+        button.addEventListener('click', () => {
+            myLibrary.splice(button.dataset.index, 1);
+            showBooks();
+        });
+        newElement.appendChild(button);
         main.appendChild(newElement);
     }
 }
