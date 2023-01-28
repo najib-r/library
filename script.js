@@ -80,6 +80,8 @@ function showBooks() {
         newElement.className = "card";
         newElement.dataset.index = i;
         newElement.innerHTML = myLibrary[i].showInfo();
+        const buttons = document.createElement('div');
+        buttons.className = "buttons";
         const button = document.createElement('button');
         button.className = "removeBtn";
         button.dataset.index = i;
@@ -88,7 +90,7 @@ function showBooks() {
             myLibrary.splice(button.dataset.index, 1);
             showBooks();
         });
-        newElement.appendChild(button);
+        buttons.appendChild(button);
         const button2 = document.createElement('button');
         button.className = "readBtn";
         button2.dataset.index = i;
@@ -97,7 +99,8 @@ function showBooks() {
             myLibrary[button2.dataset.index].toggleRead();
             showBooks();
         });
-        newElement.appendChild(button2);
+        buttons.appendChild(button2);
+        newElement.appendChild(buttons);
         main.appendChild(newElement);
     }
 }
