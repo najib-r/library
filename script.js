@@ -11,6 +11,14 @@ Book.prototype.showInfo = function() {
     return (this.title + " by " + this.author + ", " + this.pages + " pages, " + this.read);
 }
 
+Book.prototype.toggleRead = function() {
+    if (this.read === "yes") {
+        this.read = "no";
+    } else {
+        this.read = "yes";
+    }
+}
+
 function addBookToLibrary(book) {
     myLibrary.push(book);
 } 
@@ -81,6 +89,15 @@ function showBooks() {
             showBooks();
         });
         newElement.appendChild(button);
+        const button2 = document.createElement('button');
+        button.className = "readBtn";
+        button2.dataset.index = i;
+        button2.textContent = "Toggle Read";
+        button2.addEventListener('click', () => {
+            myLibrary[button2.dataset.index].toggleRead();
+            showBooks();
+        });
+        newElement.appendChild(button2);
         main.appendChild(newElement);
     }
 }
