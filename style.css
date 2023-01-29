@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Roboto:wght@400;700&display=swap');
+
 body {
+    font-family: 'Quicksand', 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0;
@@ -52,11 +55,12 @@ button {
 #popup {
     margin: 15% auto;
     width: 15%;
-    background-color: rgb(189, 189, 196);
+    background-color: #ccfbf1;
     padding: 2rem;
     border: 1px solid #888;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: grey;
 }
