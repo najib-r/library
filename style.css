@@ -3,10 +3,12 @@ body {
     grid-template-columns: repeat(3, 1fr);
     margin: 0;
     padding: 0;
+    background-color: #f0fdfa;
+    color: white
 }
 
 header {
-    background-color: beige;
+    background-color: #99f6e4;
     grid-column-start: 1;
     grid-column-end: 4;
     padding: 0.3rem;
@@ -25,7 +27,7 @@ button {
 }
 
 .card {
-    background-color: aquamarine;
+    background-color: #0f766e;
     max-width: 10rem;
     height: 10rem;
     display: flex;
@@ -34,6 +36,7 @@ button {
     padding: 0.3rem;
     flex-direction: column;
     gap: 3rem;
+    border-radius: 5px;
 }
 
 .modal {
@@ -48,8 +51,12 @@ button {
 
 #popup {
     margin: 15% auto;
-    width: 30%;
+    width: 15%;
     background-color: rgb(189, 189, 196);
     padding: 2rem;
     border: 1px solid #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

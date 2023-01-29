@@ -14,16 +14,17 @@
     </header>
     <div class="modal" id="myModal">
         <form id="popup">
-            <label for="b-title">Title</label>
-            <input type="text" id="b-title"><br>
-            <label for="b-author">Author</label>
-            <input type="text" id="b-author"><br>
-            <label for="b-pages">Pages</label>
-            <input type="number" id="b-pages"><br>
-            <label for="b-read">Read?</label>
-            <input type="checkbox" id="b-read">
-            <button type="submit" id="submitBtn">Add book</button>
-            <button type="button" id="cancelBtn">Cancel</button>
+            <input placeholder="Title" type="text" id="b-title">
+            <input placeholder="Author" type="text" id="b-author">
+            <input placeholder="Pages" type="number" id="b-pages">
+            <div>
+                <input type="checkbox" id="b-read">
+                <label for="b-read">Read?</label>
+            </div>
+            <div class="buttons">
+                <button type="submit" id="submitBtn">Add book</button>
+                <button type="button" id="cancelBtn">Cancel</button>
+            </div>
         </form>
     </div>
     <div class="main">
