@@ -106,3 +106,23 @@ function showBooks() {
 }
 
 showBooks();
+
+
+function disableField() {
+    const invalidForm = document.querySelector('form:invalid');
+    const submitBtn = document.getElementById('submitBtn');
+    if (invalidForm) {
+      submitBtn.setAttribute('disabled', true);
+    } else {
+      submitBtn.disabled = false;
+    }
+  }
+
+const inputs = document.getElementsByTagName("input");
+for (let input of inputs) {
+    input.addEventListener('change', disableField);
+}
+  
+disableField();
+  
+  
