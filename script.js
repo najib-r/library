@@ -58,6 +58,11 @@ submitBtn.addEventListener('click', function validateForm(event) {
     inputs.forEach(input => {
         input.value = '';
     });
+
+    // disable submit button
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.setAttribute('disabled', true);
+
 });
 
 
