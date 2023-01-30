@@ -18,7 +18,10 @@ header {
 }
 
 button {
+    border: 0.5px solid black;
+    background-color: white;
     float: right;
+    border-radius: 3px;
 }
 
 .main {
@@ -63,4 +66,12 @@ button {
     align-items: center;
     flex-direction: column;
     color: grey;
+}
+
+#submitBtn {
+    background-color: rgb(8, 180, 8);
+}
+
+#submitBtn:disabled {
+    background-color: rgb(228, 228, 228);
 }
