@@ -125,7 +125,7 @@ function disableField() {
 
 const inputs = document.getElementsByTagName("input");
 for (let input of inputs) {
-    input.addEventListener('change', disableField);
+    input.addEventListener('input', disableField);
 }
   
 disableField();
