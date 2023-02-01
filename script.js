@@ -66,15 +66,6 @@ submitBtn.addEventListener('click', function validateForm(event) {
 });
 
 
-const book1 = new Book("The Hobbit", "Author", "356", "yes");
-addBookToLibrary(book1);
-
-const book2 = new Book("Hunger Games", "Author 2", "297", "no");
-addBookToLibrary(book2);
-
-const book3 = new Book("Hunger Games II", "Author 2", "332", "no");
-addBookToLibrary(book3);
-
 
 function showBooks() {
     const main = document.querySelector('.main');
