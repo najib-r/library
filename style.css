@@ -64,13 +64,25 @@ button:hover {
     width: 15%;
     background-color: #ccfbf1;
     padding: 2rem;
-    border: 1px solid #888;
+    border: 2px solid #888;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     color: grey;
+    gap: .1rem;
 }
+
+#popup input {
+    max-width: 200x;
+    width: 100%;
+    min-width: 50px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100;
+}
+
 
 #submitBtn {
     background-color: rgb(8, 180, 8);
@@ -78,4 +90,14 @@ button:hover {
 
 #submitBtn:disabled {
     background-color: rgb(228, 228, 228);
+}
+
+.container {
+    display: flex;
+}
+
+@media screen and (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+    }
 }
